@@ -5,6 +5,7 @@ version: 1.2.0
 author: Ethan
 license: MIT
 platforms: [macos, linux]
+github: yangyf1994/tennis-deadplay-removal
 metadata:
   hermes:
     tags: [tennis, video-editing, ffmpeg, highlights, sports]

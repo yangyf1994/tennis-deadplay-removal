@@ -14,12 +14,12 @@
 
 These are relative ratios, not absolute numbers — actual wall time scales with source duration and resolution.
 
-| Mode | Relative Speed | Notes |
-|------|---------------|-------|
-| Hardware (`hevc_videotoolbox`) + motion | 1x (baseline) | ~30s for 2:20 clip |
-| Hardware + `--no-motion` | ~0.7x | Skips frame extraction + MAD (~8s saved) |
-| Software (`libx265`) + `--no-motion` | ~5x | Quality reference, no flicker |
-| `-c copy` concat (hypothetical) | ~0.1x | No re-encode at all |
+| Mode | Relative Speed | Wall Time (2-2.5min source) | Notes |
+|------|---------------|----------------------------|-------|
+| Hardware (`hevc_videotoolbox`) + motion | 1x (baseline) | ~29s | Full motion + HDR encode |
+| Hardware + `--no-motion` | ~0.7x | ~21s | Skips frame extraction + MAD (~8s saved) |
+| Software (`libx265`) + `--no-motion` | ~5x | ~2m27s | Quality reference, no flicker |
+| `-c copy` concat (hypothetical) | ~0.1x | ~3-5s | No re-encode at all |
 
 The analysis phase (audio peak detection) is negligible (~0.5-1s). Dominant cost is always the FFmpeg re-encode.
 

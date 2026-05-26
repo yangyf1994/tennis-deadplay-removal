@@ -2,6 +2,8 @@
 
 **Your 45-minute match has about 9 minutes of actual tennis. This finds it.**
 
+![Tennis Deadplay Removal Cover](assets/cover.png)
+
 Raw tennis footage is 80% dead time — ball retrieval, rest between points, walking to the net, waiting for the next serve. This tool watches the video, finds the racket impacts, and stitches only the rallies into a seamless highlight reel.
 
 Works on any camera (iPhone, GoPro, DJI, Android), any OS (Mac, Windows, Linux).
@@ -34,14 +36,6 @@ python3 scripts/tennis_deadplay_removal.py raw_match.MOV highlights.MOV
 ```
 
 Output lands as a playable H.265 file.
-
-### Typical results
-
-| Footage | Raw | Processed | Reduction |
-|---------|-----|-----------|-----------|
-| 1-hour singles match | ~60 min | ~10-15 min | ~80% |
-| Practice session | ~120 min | ~20-30 min | ~80% |
-| Tournament day | ~180 min | ~25-40 min | ~85% |
 
 ## Faster processing
 
